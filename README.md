@@ -28,26 +28,27 @@ Open your audio file, optionally select "normalize", and I advise to also select
 
 Then you've to adjust the code of AMRadioTransmitter.iso on 2 lines:
 * in the first line change the filename to your converted header-file
-* in the second line you can change the value of "FREQ" (0-5) to your desired AM-frequency
+* in the second line you can change the value of "FREQ" to your desired AM-frequency: 0= 549 kHz | 1= 630 kHz | 2= 729 kHz | 3= 873 kHz | 4= 1107 kHz | 5= 1431 kHz
 
 ```cpp
 #include "Blue_danube.h"
 #define FREQ 3
 ```
 
-## Antenna
+## Buildup
 
-The best wave propagation and resistance to interference is achieved with a loop-antenna with 2 connectors to GND-Pin and DAC-Output-Pin 25 of ESP32.
+All you have to do is to power the ESP32, no external electronic components necessary. ESP32 will automatically start with radio transmission.
+But of course you need an Antenna: The best wave propagation and resistance to interference is achieved with a loop-antenna. About 10 turns of a wire on a 12x12 cm frame with its 2 ends connected to GND-Pin and DAC-Output-Pin 25 of ESP32.
 Additionally to the loop-antenna you can connect a long wire (e.g. 2 meter) or alternatively touching DAC-Pin with your Finger, which slightly enhances an already weak signal far away the ESP32. 
 
-![Screenshot](buildup.png)
+![Screenshot](buildup.jpg)
 
 ## History
 
 * Idea and original code: "AM Radio Transmitter" by bitluni [youtube.com/bitlunislab](https://youtube.com/bitlunislab) - sending him a warmly "High five"! : [github.com/bitluni/ESP32AMRadioTransmitter](https://github.com/bitluni/ESP32AMRadioTransmitter)
 * Project page: [bitluni.net/am-radio-transmitter](https://bitluni.net/am-radio-transmitter) | Project video: [youtu.be/lRXHd3HNzEo](https://youtu.be/lRXHd3HNzEo)
 * "AM Radio Transmitter" just runs on legacy Arduino-ESP32 <= v2.x (based on ESP-IDF <= 4.4)
-* Completely re-coded and speed-optimized to work with modern ESP32-API by PPete [www.ppete.de/](https://www.ppete.de/)
+* Completely re-coded and speed-optimized to work with modern ESP32-API by PPete [www.ppete.de](https://www.ppete.de/)
 * "AM Radio Transmitter v2" now runs on Arduino-ESP >= v3.x and ESP-IDF >= v5.1
 * Added Multi-frequency selection
 
