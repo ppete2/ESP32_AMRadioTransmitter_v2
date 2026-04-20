@@ -13,7 +13,7 @@
 
 #include <driver/dac_continuous.h>
 #include <soc/i2s_reg.h>
-#include "blue_danube.h"
+#include "Blue_danube.h"
 
 #define FREQ 3   // Choose Frequency: 0= 549 kHz | 1= 630 kHz | 2= 729 kHz | 3= 873 kHz | 4= 1107 kHz | 5= 1431 kHz
 
