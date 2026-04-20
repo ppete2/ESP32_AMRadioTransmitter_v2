@@ -37,8 +37,8 @@ Then you've to adjust the code of AMRadioTransmitter.iso on 2 lines:
 
 ## Buildup
 
-All you have to do is to power the ESP32, no external electronic components necessary. ESP32 will automatically start with radio transmission.
-But of course you need an Antenna: The best wave propagation and resistance to interference is achieved with a loop-antenna. About 10 turns of a wire on a 12x12 cm frame with its 2 ends connected to GND-Pin and DAC-Output-Pin 25 of ESP32.
+All you have to do is to power the ESP32, no external electronic components necessary. ESP32 will automatically start with radio transmission.\
+But of course you need an Antenna: The best wave propagation and resistance to interference is achieved with a loop-antenna. About 8 turns of a wire on a 12x10 cm frame with its 2 ends connected to GND-Pin and DAC-Output-Pin 25 of ESP32.
 Additionally to the loop-antenna you can connect a long wire (e.g. 2 meter) or alternatively touching DAC-Pin with your Finger, which slightly enhances an already weak signal far away the ESP32. 
 
 ![Screenshot](buildup.jpg)
